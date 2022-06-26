@@ -40,6 +40,12 @@ public class Result<T> implements Serializable {
         return result;
     }
 
+    public static <T> Result<T> success(String message) {
+        Result<T> result = success();
+        result.setMessage(message);
+        return result;
+    }
+
     public static <T> Result<T> success(T data) {
         Result<T> result = success();
         result.setData(data);
