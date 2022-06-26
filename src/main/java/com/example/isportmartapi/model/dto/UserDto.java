@@ -5,6 +5,8 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
+ * 返回到客户端（前端）的user传输对象
+ *
  * @author mahao
  * @since 2022-06-25
  */

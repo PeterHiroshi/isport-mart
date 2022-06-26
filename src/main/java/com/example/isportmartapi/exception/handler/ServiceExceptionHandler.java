@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ServiceExceptionHandler {
 
     @ExceptionHandler(ServiceException.class)
-    public Result<?> handleJeecgBootException(ServiceException e){
+    public Result<?> handleServiceException(ServiceException e){
         log.error(e.getMessage(), e);
         return Result.failure(e.getMessage());
     }

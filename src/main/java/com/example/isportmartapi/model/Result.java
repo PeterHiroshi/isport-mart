@@ -66,6 +66,12 @@ public class Result<T> implements Serializable {
         return result;
     }
 
+    public static <T> Result<T> failure(String message) {
+        Result<T> result = failure();
+        result.setMessage(message);
+        return result;
+    }
+
     public static <T> Result<T> failure(T data, String message) {
         Result<T> result = failure();
         result.setData(data);
